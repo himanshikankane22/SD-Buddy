@@ -64,7 +64,7 @@ FastAPI (app/main.py)
    ├── Sessions (in-memory)
    ├── Flow router ── password_reset / bitlocker / mfa_reset
    ├── Triage engine ── classifier + priority matrix + major detection
-   ├── RAG (TF-IDF) ── kb/*.md
+   ├── RAG (TF-IDF) ── backend/kb/*.md
    ├── LLM client (OpenRouter) ── with rule-based fallback
    └── Ticket generator ── ServiceNow mock
 ```
@@ -88,8 +88,8 @@ project2/
 │   │   ├── flows/             # password_reset, bitlocker, mfa_reset, security
 │   │   └── tickets/           # ServiceNow-style draft generation
 │   ├── tests/                 # pytest suite (25 tests)
+│   ├── kb/                    # knowledge base markdown (RAG source)
 │   └── pyproject.toml         # pytest + ruff config
-├── kb/                        # knowledge base markdown (RAG source)
 ├── frontend/                  # React + Vite + TypeScript chat UI
 └── .env.example               # env template (copy to .env, add key)
 ```

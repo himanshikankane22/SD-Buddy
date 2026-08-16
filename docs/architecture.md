@@ -19,7 +19,7 @@ Deep dive behind the Service Desk L1 Copilot, written as engineering documentati
 │                                       │     password_reset │ bitlocker │ mfa_reset │
 │                                       ├─ Triage engine (every message)            │
 │                                       │     Incident/SR · priority · major?       │
-│                                       ├─ RAG retriever (TF-IDF over kb/*.md)      │
+│                                       ├─ RAG retriever (TF-IDF over backend/kb/*.md) │
 │                                       ├─ LLM client (OpenRouter, fallback if off) │
 │                                       └─ Ticket generator ─► ServiceNow mock      │
 │                                                                                   │
@@ -125,7 +125,7 @@ Shared `flows/security.py` holds the `IdentityCheck` validator — pure logic, u
 
 `backend/app/rag/`
 
-- **Loader**: reads `kb/*.md`, splits on `##` headings into `KBSection(source, title, body)`.
+- **Loader**: reads `backend/kb/*.md`, splits on `##` headings into `KBSection(source, title, body)`.
 - **Index**: tokenize → lowercase → stopwords → frequency → TF-IDF weighting.
 - **Retrieve**: cosine-ish similarity of query against sections; returns top-k with scores.
 - **Format**: top sections are rendered as a compact context block for the LLM prompt.

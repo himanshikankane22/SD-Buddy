@@ -32,10 +32,16 @@ def _kb_dir(kb_dir: str | None = None) -> Path:
         p = Path(kb_dir)
         if p.exists():
             return p
+    # Resolve the KB regardless of the working directory or deployment layout:
+    #  - ``kb_dir`` setting (relative to CWD),
+    #  - backend package root (Vercel ships only the backend/ service root),
+    #  - repository root (full monorepo clone).
+    pkg_root = Path(__file__).resolve().parent.parent.parent
     candidates = [
         Path(get_settings().kb_dir),
         Path(get_settings().kb_dir).resolve(),
-        Path(__file__).resolve().parent.parent.parent.parent / "kb",
+        pkg_root / "kb",
+        pkg_root.parent / "kb",
     ]
     for c in candidates:
         if c.exists():
