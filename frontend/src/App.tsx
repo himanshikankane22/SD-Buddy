@@ -119,17 +119,22 @@ export default function App() {
     <div className="app-shell">
       <header className="app-header">
         <div className="brand">
-          <div className="brand-mark">SD</div>
-          <div>
+          <div className="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 3.5c-4.7 0-8.5 3.2-8.5 7.2 0 2.2 1.2 4.2 3 5.5-.1.9-.5 2.1-1.3 3.2-.2.3 0 .7.4.8 1.4.4 3.2-.1 4.6-1.1.6.1 1.2.1 1.8.1 4.7 0 8.5-3.2 8.5-7.2S16.7 3.5 12 3.5z" />
+            </svg>
+          </div>
+          <div className="brand-copy">
             <h1>SD Buddy</h1>
-            <span className="brand-sub">Service Desk L1 Copilot</span>
+            <span className="brand-sub">Service Desk Copilot</span>
           </div>
         </div>
         <div className="header-controls">
           <RoleToggle value={role} onChange={switchRole} />
           <ChannelSelector value={channel} onChange={switchChannel} />
           {health && (
-            <span className={`llm-badge ${health.llm_configured ? "on" : "off"}`}>
+            <span className={`llm-badge ${health.llm_configured ? "on" : "off"}`} title="Model status">
+              <span className="badge-dot" aria-hidden="true" />
               {health.llm_configured ? `LLM: ${health.model.split("/").pop()}` : "LLM: fallback mode"}
             </span>
           )}
@@ -141,7 +146,7 @@ export default function App() {
       <main className="app-main">
         <section className="chat-column">
           <FlowWizard flow={flow} />
-          <div className="chat-scroll" ref={scrollRef}>
+          <div className="chat-scroll" ref={scrollRef} role="log" aria-label="Conversation">
             {messages.map((m, i) => (
               <MessageBubble key={i} message={m} />
             ))}
@@ -163,15 +168,19 @@ export default function App() {
               e.preventDefault();
               void handleSend(input);
             }}
+            aria-label="Send a message"
           >
             <input
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder={flow ? "Type your answer to continue the guided flow…" : "Describe your issue…"}
+              aria-label="Message"
               disabled={busy}
             />
-            <button type="submit" disabled={busy || !input.trim()}>
-              Send
+            <button type="submit" className="send-btn" aria-label="Send" disabled={busy || !input.trim()}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 19V5M5 12l7-7 7 7" />
+              </svg>
             </button>
           </form>
         </section>

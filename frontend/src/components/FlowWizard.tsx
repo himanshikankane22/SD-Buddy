@@ -9,19 +9,34 @@ export function FlowWizard({ flow }: { flow: FlowSnapshot | null }) {
     : Math.round(((flow.step_index + 1) / flow.step_total) * 100);
 
   return (
-    <div className={`flow-wizard ${flow.done ? "done" : ""}`}>
+    <div className={`flow-wizard ${flow.done ? "done" : ""}`} aria-live="polite">
       <div className="flow-header">
         <span className="flow-title">{flow.label}</span>
         <span className="flow-step-label">
           {identityActive
             ? `Identity check ${flow.identity_progress}/${flow.identity_total}`
-            : `Step ${flow.step_index + 1}/${flow.step_total} — ${flow.step}`}
+            : `Step ${flow.step_index + 1}/${flow.step_total} · ${flow.step}`}
         </span>
       </div>
       <div className="flow-progress-track">
         <div className="flow-progress-fill" style={{ width: `${pct}%` }} />
       </div>
-      {flow.done && <div className="flow-done-badge">✅ Complete — ticket drafted</div>}
+      {flow.done && (
+        <div className="flow-done-badge">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M4 12.5l5 5L20 6.5" />
+          </svg>
+          Complete · ticket drafted
+        </div>
+      )}
     </div>
   );
 }
