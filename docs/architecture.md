@@ -1,7 +1,6 @@
 # SD Buddy — Architecture & Design Notes
 
-Deep dive behind the Service Desk L1 Copilot. Written both as engineering documentation and
-as **interview prep** for the TCS onboarding technical survey.
+Deep dive behind the Service Desk L1 Copilot, written as engineering documentation.
 
 ---
 
