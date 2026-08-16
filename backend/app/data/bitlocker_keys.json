@@ -1,0 +1,42 @@
+[
+  {
+    "device_name": "JDE-LT-10452-01",
+    "serial_number": "SN5K2B10452",
+    "employee_code": "JDE-10452",
+    "key_id": "4290b6c0-b17a-497a-8552-272cc30e80d4",
+    "bitlocker_recovery_key": "496298-461032-321464-595518-463221-173943-033616-139579",
+    "status": "encrypted"
+  },
+  {
+    "device_name": "JDE-LT-10877-01",
+    "serial_number": "SN5K2B10877",
+    "employee_code": "JDE-10877",
+    "key_id": "045219ec-a53b-41ae-b310-08ec883aaedd",
+    "bitlocker_recovery_key": "158422-038236-492536-574783-256300-205084-114356-069773",
+    "status": "encrypted"
+  },
+  {
+    "device_name": "JDE-LT-12011-01",
+    "serial_number": "SN5K2B12011",
+    "employee_code": "JDE-12011",
+    "key_id": "c3a6f2e1-9b14-4f20-a8d1-6e5c0b27a5f8",
+    "bitlocker_recovery_key": "739104-285617-450923-668142-791356-204578-913645-027831",
+    "status": "encrypted"
+  },
+  {
+    "device_name": "JDE-LT-14198-01",
+    "serial_number": "SN5K2B14198",
+    "employee_code": "JDE-14198",
+    "key_id": "8d2c7a31-5e6f-4b8a-9c1d-4f7e2a6b3d90",
+    "bitlocker_recovery_key": "284715-903642-571238-460293-817465-329508-146793-582410",
+    "status": "encrypted"
+  },
+  {
+    "device_name": "JDE-LT-15566-01",
+    "serial_number": "SN5K2B15566",
+    "employee_code": "JDE-15566",
+    "key_id": "1f9e4d72-3a8b-4c6d-b7e2-09d1f5a8c4b3",
+    "bitlocker_recovery_key": "615820-374915-802647-293184-750263-481057-926341-174528",
+    "status": "encrypted"
+  }
+]

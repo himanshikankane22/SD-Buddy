@@ -1,0 +1,133 @@
+# Impact x Urgency priority matrix + priority definitions.
+# Editable without code changes — the chatbot reads this at startup.
+
+impact_levels: ["high", "medium", "low"]
+urgency_levels: ["high", "medium", "low"]
+
+# Matrix: priority for each (impact, urgency) pair.
+# order: row = impact, col = urgency -> P1..P4
+matrix:
+  high:
+    high: P1
+    medium: P2
+    low: P2
+  medium:
+    high: P2
+    medium: P3
+    low: P3
+  low:
+    high: P3
+    medium: P4
+    low: P4
+
+priorities:
+  P1:
+    name: "Critical"
+    description: "Whole site / core service down, critical process blocked, security breach."
+    response_sla: "15 minutes"
+    resolution_sla: "4 hours"
+    major_incident: true
+  P2:
+    name: "High"
+    description: "Significant impact — department or business-critical single user blocked."
+    response_sla: "30 minutes"
+    resolution_sla: "8 hours"
+    major_incident: false
+  P3:
+    name: "Medium"
+    description: "Single user, workaround available."
+    response_sla: "2 hours"
+    resolution_sla: "3 business days"
+    major_incident: false
+  P4:
+    name: "Low"
+    description: "Minor inconvenience, standard fulfillment."
+    response_sla: "4 hours"
+    resolution_sla: "5 business days"
+    major_incident: false
+
+# Severity keywords that force a Major Incident flag even before the matrix is applied.
+major_incident_keywords:
+  - "site down"
+  - "plant down"
+  - "office down"
+  - "no network"
+  - "network down"
+  - "network is down"
+  - "internet down"
+  - "internet is down"
+  - "no internet"
+  - "no connectivity"
+  - "vpn down"
+  - "wifi down"
+  - "wi-fi down"
+  - "site is down"
+  - "plant is down"
+  - "office is down"
+  - "server is down"
+  - "all users"
+  - "everyone"
+  - "email down"
+  - "teams down"
+  - "system outage"
+  - "outage"
+  - "security breach"
+  - "hacked"
+  - "ransomware"
+  - "phishing"
+  - "breach"
+  - "payroll not processing"
+  - "sap down"
+  - "server down"
+
+# Keyword hints for incident vs service request classification.
+# If incident hints outweigh request hints, classify as Incident.
+incident_hints:
+  - "down"
+  - "not working"
+  - "broken"
+  - "error"
+  - "crash"
+  - "locked"
+  - "can't"
+  - "cannot"
+  - "frozen"
+  - "slow"
+  - "fail"
+  - "failed"
+  - "stuck"
+  - "bsod"
+  - "blue screen"
+  - "won't open"
+  - "won't load"
+  - "no internet"
+  - "offline"
+  - "blocked"
+
+service_request_hints:
+  - "password reset"
+  - "forgot password"
+  - "new laptop"
+  - "install"
+  - "access to"
+  - "request"
+  - "need"
+  - "want"
+  - "provide"
+  - "license"
+  - "software"
+  - "mfa reset"
+  - "bitlocker"
+  - "create"
+  - "add"
+  - "grant"
+
+categories:
+  - "Identity & Access"
+  - "Endpoint"
+  - "Collaboration (M365)"
+  - "ERP (SAP)"
+  - "Network / Connectivity"
+  - "Security"
+  - "Hardware"
+  - "Other"

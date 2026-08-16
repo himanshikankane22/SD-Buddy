@@ -1,0 +1,80 @@
+[
+  {
+    "employee_code": "JDE-10452",
+    "full_name": "Ananya Sharma",
+    "primary_location": "Mumbai HO",
+    "mobile_number": "+91 98200 45123",
+    "email_id": "ananya.sharma@jdepeets.demo",
+    "reporting_manager": "Rajesh Nair",
+    "department": "Procurement",
+    "ad_username": "asharma",
+    "ad_account_status": "active",
+    "password_last_changed": "2026-07-28",
+    "sap_user": "ANANYAS"
+  },
+  {
+    "employee_code": "JDE-10877",
+    "full_name": "Marcus De Vries",
+    "primary_location": "Amsterdam Plant",
+    "mobile_number": "+31 6 2415 8890",
+    "email_id": "marcus.devries@jdepeets.demo",
+    "reporting_manager": "Lieke van der Berg",
+    "department": "Plant Operations",
+    "ad_username": "mdevries",
+    "ad_account_status": "locked",
+    "password_last_changed": "2026-06-15",
+    "sap_user": "MDEVR"
+  },
+  {
+    "employee_code": "JDE-12011",
+    "full_name": "Priya Patel",
+    "primary_location": "Bengaluru R&D",
+    "mobile_number": "+91 99450 11223",
+    "email_id": "priya.patel@jdepeets.demo",
+    "reporting_manager": "Karthik Subramanian",
+    "department": "Finance",
+    "ad_username": "ppatel",
+    "ad_account_status": "active",
+    "password_last_changed": "2026-08-02",
+    "sap_user": "PRPATEL"
+  },
+  {
+    "employee_code": "JDE-13340",
+    "full_name": "Sophie Laurent",
+    "primary_location": "Paris Office",
+    "mobile_number": "+33 6 12 34 56 78",
+    "email_id": "sophie.laurent@jdepeets.demo",
+    "reporting_manager": "Claire Dubois",
+    "department": "HR",
+    "ad_username": "slaurent",
+    "ad_account_status": "active",
+    "password_last_changed": "2026-05-19",
+    "sap_user": "SOLAUR"
+  },
+  {
+    "employee_code": "JDE-14198",
+    "full_name": "Tom Miller",
+    "primary_location": "London Office",
+    "mobile_number": "+44 7700 900123",
+    "email_id": "tom.miller@jdepeets.demo",
+    "reporting_manager": "Sarah Whitfield",
+    "department": "Sales",
+    "ad_username": "tmiller",
+    "ad_account_status": "active",
+    "password_last_changed": "2026-07-10",
+    "sap_user": "TMILLER"
+  },
+  {
+    "employee_code": "JDE-15566",
+    "full_name": "Elena Rodriguez",
+    "primary_location": "Madrid Office",
+    "mobile_number": "+34 612 345 678",
+    "email_id": "elena.rodriguez@jdepeets.demo",
+    "reporting_manager": "Carlos Mendez",
+    "department": "Supply Chain",
+    "ad_username": "erodriguez",
+    "ad_account_status": "active",
+    "password_last_changed": "2026-08-11",
+    "sap_user": "ELRODR"
+  }
+]
