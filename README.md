@@ -9,6 +9,10 @@ ServiceNow-style ticket — all in one conversation.
 > Portfolio project for a TCS onboarding technical survey, modelled on real JDE Peets L1
 > service desk work (HCL). All backend integrations are **simulated** with seeded data.
 
+**Author:** Junior Endpoint Support Analyst — hands-on L1 engineer experience on the
+Intune/endpoint management team (device enrolment, compliance, BitLocker, and
+remediation).
+
 ## Demo
 
 - Open **http://localhost:5173** with both servers running (see below).
